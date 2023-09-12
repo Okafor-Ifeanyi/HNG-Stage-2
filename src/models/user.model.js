@@ -10,7 +10,6 @@ const userSchema = new Schema({
     age: {
         type: Number,
         trim: true,
-        required: true,
     },
     phone_number: {
         type: String, 
