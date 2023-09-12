@@ -1,0 +1,30 @@
+{
+  "name": "hng-stage-2",
+  "version": "1.0.0",
+  "description": "Stage Two Task You are to build a simple REST API capable of CRUD operations on a \"person\" resource, interfacing with any database of your choice. Your API should dynamically handle parameters, such as adding or retrieving a person by name. Accompany the development with UML diagrams to represent your system's design and database structure",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Okafor-Ifeanyi/HNG-Stage-2.git"
+  },
+  "author": "bio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Okafor-Ifeanyi/HNG-Stage-2/issues"
+  },
+  "homepage": "https://github.com/Okafor-Ifeanyi/HNG-Stage-2#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-form-data": "^2.0.22",
+    "joi": "^17.10.1",
+    "mongoose": "^7.5.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+}
