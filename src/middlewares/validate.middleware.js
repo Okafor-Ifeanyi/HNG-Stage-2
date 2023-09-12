@@ -12,9 +12,8 @@ const validate = (schema) => {
                     path: i.path[0],
                 };
             });
-  
             res.status(422).json({ error: message })
         }
     }
 };
-export default validate
+module.exports = validate
