@@ -1,4 +1,10 @@
 const userModel = require("../models/user.model")
+const { ObjectId } = require('mongodb');
+
+// Check if a string is a valid ObjectID
+function isValidObjectId(idString) {
+    return ObjectId.isValid(idString);
+}
 
 exports.createUser = async (req, res) => {
     const userInfo = req.body
@@ -53,9 +59,14 @@ exports.deleteUser = async (req, res) => {
 exports.getUser = async (req, res) => {
     const id = req.params.user_id
     try {
+        let checkUser
         // check if id exists
-        const checkUser = await userModel.findOne({_id: id})
-        if (!checkUser) throw new Error("User ID stated does not exist")
+        if (isValidObjectId(id)){
+            checkUser = await userModel.findOne({_id: id})
+        } else {
+            checkUser = await userModel.find({name: id})
+        }
+        if (!checkUser || checkUser.length === 0) throw new Error("User ID stated does not exist")
 
         return res.status(200).json({
             Success: true, 
