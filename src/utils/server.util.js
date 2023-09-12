@@ -9,6 +9,8 @@ require('dotenv').config()
 const cors = require("cors")
 const formData = require('express-form-data')
 const logger = require('morgan')
+const errorHandler = require('../middlewares/error.middleware')
+const rootRoute = require("../routes/index.route")
 
 function createServer () {
     const app = express()
@@ -26,10 +28,14 @@ function createServer () {
 
     app.use(express.urlencoded({extended: false}))
     app.use(express.json())
-    // app.use('/api', rootRoute)
+
+    // ROUTES   
+    app.use('/api', rootRoute)
+
+    // ERROR HANDLER
+    app.use(errorHandler)
 
     return app
-
 }
 
 module.exports = createServer
