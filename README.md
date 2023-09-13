@@ -38,26 +38,34 @@ Before you begin, ensure you have met the following requirements:
 
 2. Change to the project directory:
 
-    `cd your-api-repo`
+    ```bash
+    cd your-api-repo
+    ```
 
 3. Install dependencies:
 
-    `npm install`
+    ```bash
+    npm install
+    ```
 
 ### Environment Variables
 
 - Create a .env file in the root directory of your project and add the following environment variables:
-
-1.  MONGODB_URI=your_mongodb_uri_here
-2.  PORT=your_desired_port_here
+    ``` bash
+    MONGO_URI= ? your_mongodb_uri_here  
+    PORT= ? your_desired_port_here
+    ```
+MONGO_URI=your_mongodb_uri_here  
+PORT=your_desired_port_here
 
 ## API Endpoints
 - **Create a new person**:  `POST /api/`
-- **Get details of a person by ID or Name**:  `GET /api/person/:info`
 
-- **Update details of an existing person by ID**:   `PATCH /api/person/:id`
+- **Get details of a person by ID or Name**:  `GET /api/:info`
 
-- **Remove a person by ID**:  `DELETE /api/person/:id`
+- **Update details of an existing person by ID**:   `PATCH /api/:id`
+
+- **Remove a person by ID**:  `DELETE /api/:id`
 
 ## Testing
 Use Postman or your preferred API testing tool to test the CRUD operations. Here's a sample Postman collection you can import: Postman Collection.
