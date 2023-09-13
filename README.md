@@ -69,10 +69,10 @@ PORT=your_desired_port_here
 
 ## Testing
 Use Postman or your preferred API testing tool to test the CRUD operations. Here's a sample Postman collection you can import: Postman Collection.
->   [Render Live](https://vitals-8myt.onrender.com)
+>   [Render Live](https://hng-stage-2-zcxv.onrender.com)
 
 ## Documentation
->   [Postman Docs](https://documenter.getpostman.com/view/19026826/2s93m7X2Jc)
+>   [Postman Docs](https://documenter.getpostman.com/view/19026826/2s9YC4TYE3)
 
 ## UML Diagram
 >   [Diagrams on dbdiagrams.io](https://dbdiagram.io/d/64fe69fa02bd1c4a5e4dcb09)
