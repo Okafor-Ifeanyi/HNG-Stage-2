@@ -64,9 +64,9 @@ exports.getUser = async (req, res) => {
         if (isValidObjectId(id)){
             checkUser = await userModel.findOne({_id: id})
         } else {
-            checkUser = await userModel.find({name: id})
+            checkUser = await userModel.findOne({name: id})
         }
-        if (!checkUser || checkUser.length === 0) throw new Error("User ID stated does not exist")
+        if (!checkUser ) throw new Error("User Info stated does not exist")
 
         return res.status(200).json({
             Success: true, 
